@@ -1,0 +1,4 @@
+# Extra packages for the LLM comparison (llm_eval/ and llm_comparison.ipynb)
+openai>=2.0
+google-genai>=1.30
+python-dotenv>=1.0

@@ -1,0 +1,11 @@
+,XGBoost
+1,python tok_script
+2,helper
+3,bootstrap
+4,explain
+5,run python
+6,[flag] has_concealment_rule
+7,curl
+8,runtime
+9,Encoded payload: base64 decode & execute (43 features)
+10,exec

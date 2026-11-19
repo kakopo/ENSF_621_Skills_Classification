@@ -1,0 +1,32 @@
+# ---------------- secrets ----------------
+# API keys. Only the empty template .env.example is committed.
+.env
+.env.*
+!.env.example
+.claude/settings.local.json
+
+# ---------------- data (large, re-downloaded / re-created by the notebook) ----------------
+# SkillTrustBench (333 MB, also contains real malicious skill samples)
+skilltrustbench_data/
+SkillTrustBench_with_flags/
+# cleaned skills exported for the LLM comparison (~190 MB, Section 10 of the notebook)
+llm_eval/data/
+# LLM batch upload files (large, rebuilt from the data). Predictions and summaries in results/ ARE kept.
+results/llm/**/batch_input_*.jsonl
+
+# ---------------- caches and local copies ----------------
+.sklearn_cache_svc_flags_v2/
+backups/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+*.log
+
+# ---------------- environments, editors, OS ----------------
+.venv/
+venv/
+env/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
