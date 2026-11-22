@@ -1,11 +1,11 @@
-,Decision Tree,SVM,Random Forest,XGBoost,Stack (top 4)
-1,python tok_script,[flag] has_concealment_rule,python tok_script,helper,[flag] has_concealment_rule
-2,helper,[flag] has_staged_payload,[flag] has_concealment_rule,python tok_script,helper
-3,bootstrap,[flag] has_shell_exec,curl,explain,python tok_script
-4,[flag] has_concealment_rule,[flag] has_destructive_op,paths,[flag] has_concealment_rule,explain
-5,benchmark,[flag] has_risky_setup_step,temporary,curl,curl
-6,run python,[flag] has_hidden_trigger,runtime,tok_ipaddr,skill
-7,material,helper,explain,run python,run python
-8,skill,[flag] has_encoded_exec,inspect,[flag] has_shell_exec,[flag] has_shell_exec
-9,execute python,trusted,cache,bash python,pre
-10,command,runtime,pre,initialization,following
+,Decision Tree,SVM,Random Forest,XGBoost,Stack (top 4),Stack (all 6)
+1,python tok_script,[flag] has_concealment_rule,python tok_script,helper,[flag] has_concealment_rule,[flag] has_concealment_rule
+2,helper,[flag] has_staged_payload,[flag] has_concealment_rule,python tok_script,helper,helper
+3,bootstrap,[flag] has_shell_exec,curl,explain,python tok_script,python tok_script
+4,[flag] has_concealment_rule,[flag] has_destructive_op,paths,[flag] has_concealment_rule,explain,explain
+5,benchmark,[flag] has_risky_setup_step,temporary,curl,curl,curl
+6,run python,[flag] has_hidden_trigger,runtime,tok_ipaddr,skill,[flag] has_shell_exec
+7,material,helper,explain,run python,run python,run python
+8,skill,[flag] has_encoded_exec,inspect,[flag] has_shell_exec,[flag] has_shell_exec,skill
+9,execute python,trusted,cache,bash python,pre,tok_ipaddr
+10,command,runtime,pre,initialization,following,following

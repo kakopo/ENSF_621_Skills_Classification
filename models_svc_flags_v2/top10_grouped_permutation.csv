@@ -1,11 +1,11 @@
-,Decision Tree,SVM,Random Forest,XGBoost,Stack (top 4)
-1,python tok_script,[flag] has_concealment_rule,Encoded payload: base64 decode & execute (43 features),python tok_script,[flag] has_concealment_rule
-2,helper,Multi-part file loading & reassembly (38 features),Multi-part file loading & reassembly (38 features),helper,helper
-3,bootstrap,[flag] has_shell_exec,python tok_script,[flag] has_concealment_rule,python tok_script
-4,[flag] has_concealment_rule,"rm, [flag] has_destructive_op",[flag] has_concealment_rule,explain,explain
-5,benchmark,Encoded payload: base64 decode & execute (43 features),Shell command execution via subprocess (4 features),curl,curl
-6,run python,[flag] has_risky_setup_step,Standalone Python script structure (5 features),run python,skill
-7,skill,Standalone Python script structure (5 features),run python,tok_ipaddr,run python
-8,material,helper,curl,bootstrap,[flag] has_shell_exec
-9,execute python,[flag] has_hidden_trigger,temporary,bash python,"rm, [flag] has_destructive_op"
-10,command,[flag] has_encoded_exec,"def main, __main__ main",material,pre
+,Decision Tree,SVM,Random Forest,XGBoost,Stack (top 4),Stack (all 6)
+1,python tok_script,[flag] has_concealment_rule,Encoded payload: base64 decode & execute (43 features),python tok_script,[flag] has_concealment_rule,[flag] has_concealment_rule
+2,helper,Multi-part file loading & reassembly (38 features),Multi-part file loading & reassembly (38 features),helper,helper,helper
+3,bootstrap,[flag] has_shell_exec,python tok_script,[flag] has_concealment_rule,python tok_script,python tok_script
+4,[flag] has_concealment_rule,"rm, [flag] has_destructive_op",[flag] has_concealment_rule,explain,explain,explain
+5,benchmark,Encoded payload: base64 decode & execute (43 features),Shell command execution via subprocess (4 features),curl,curl,curl
+6,run python,[flag] has_risky_setup_step,Standalone Python script structure (5 features),run python,skill,[flag] has_shell_exec
+7,skill,Standalone Python script structure (5 features),run python,tok_ipaddr,run python,run python
+8,material,helper,curl,bootstrap,[flag] has_shell_exec,skill
+9,execute python,[flag] has_hidden_trigger,temporary,bash python,"rm, [flag] has_destructive_op","rm, [flag] has_destructive_op"
+10,command,[flag] has_encoded_exec,"def main, __main__ main",material,pre,tok_ipaddr

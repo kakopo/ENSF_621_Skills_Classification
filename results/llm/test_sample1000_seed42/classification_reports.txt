@@ -1,0 +1,99 @@
+==================== LLM: deepseek ====================
+              precision    recall  f1-score   support
+
+      normal      0.924     0.930     0.927       299
+  suspicious      0.753     0.724     0.738       185
+   malicious      0.944     0.953     0.949       516
+
+    accuracy                          0.904      1000
+   macro avg      0.874     0.869     0.871      1000
+weighted avg      0.903     0.904     0.903      1000
+
+==================== LLM: gemini ====================
+              precision    recall  f1-score   support
+
+      normal      0.894     0.987     0.938       299
+  suspicious      0.938     0.730     0.821       185
+   malicious      0.968     0.986     0.977       516
+
+    accuracy                          0.939      1000
+   macro avg      0.933     0.901     0.912      1000
+weighted avg      0.940     0.939     0.936      1000
+
+==================== LLM: gpt ====================
+              precision    recall  f1-score   support
+
+      normal      0.919     0.649     0.761       299
+  suspicious      0.524     0.762     0.621       185
+   malicious      0.935     0.942     0.938       516
+
+    accuracy                          0.821      1000
+   macro avg      0.793     0.784     0.773      1000
+weighted avg      0.854     0.821     0.827      1000
+
+==================== ML: Decision Tree ====================
+              precision    recall  f1-score   support
+
+      normal      0.880     0.886     0.883       299
+  suspicious      0.829     0.865     0.847       185
+   malicious      0.941     0.922     0.932       516
+
+    accuracy                          0.901      1000
+   macro avg      0.883     0.891     0.887      1000
+weighted avg      0.902     0.901     0.901      1000
+
+==================== ML: Naive Bayes ====================
+              precision    recall  f1-score   support
+
+      normal      0.610     0.880     0.721       299
+  suspicious      0.548     0.492     0.519       185
+   malicious      0.978     0.764     0.857       516
+
+    accuracy                          0.748      1000
+   macro avg      0.712     0.712     0.699      1000
+weighted avg      0.788     0.748     0.754      1000
+
+==================== ML: SVM ====================
+              precision    recall  f1-score   support
+
+      normal      0.927     0.940     0.934       299
+  suspicious      0.935     0.941     0.938       185
+   malicious      0.978     0.969     0.974       516
+
+    accuracy                          0.955      1000
+   macro avg      0.947     0.950     0.948      1000
+weighted avg      0.955     0.955     0.955      1000
+
+==================== ML: KNN ====================
+              precision    recall  f1-score   support
+
+      normal      0.642     0.816     0.719       299
+  suspicious      0.648     0.308     0.418       185
+   malicious      0.855     0.882     0.868       516
+
+    accuracy                          0.756      1000
+   macro avg      0.715     0.669     0.668      1000
+weighted avg      0.753     0.756     0.740      1000
+
+==================== ML: Random Forest ====================
+              precision    recall  f1-score   support
+
+      normal      0.893     0.950     0.921       299
+  suspicious      0.927     0.886     0.906       185
+   malicious      0.962     0.942     0.952       516
+
+    accuracy                          0.934      1000
+   macro avg      0.927     0.926     0.926      1000
+weighted avg      0.935     0.934     0.934      1000
+
+==================== ML: XGBoost ====================
+              precision    recall  f1-score   support
+
+      normal      0.955     0.983     0.969       299
+  suspicious      0.952     0.962     0.957       185
+   malicious      0.988     0.967     0.977       516
+
+    accuracy                          0.971      1000
+   macro avg      0.965     0.971     0.968      1000
+weighted avg      0.971     0.971     0.971      1000
+
