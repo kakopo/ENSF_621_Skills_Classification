@@ -1,0 +1,22 @@
+{
+  "llm": "gemini",
+  "provider": "gemini",
+  "model": "gemini-3.6-flash",
+  "api_key_env": "GEMINI_API_KEY",
+  "prices": {
+    "input": 0.3,
+    "cached_input": null,
+    "output": 2.5
+  },
+  "batch_discount": 0.5,
+  "json_mode": "schema",
+  "temperature": 0.0,
+  "max_output_tokens": 4000,
+  "batch_chunk_size": 100,
+  "max_retries": 1,
+  "prompt_version": "108e285a3c",
+  "include_flags": true,
+  "max_input_chars": 120000,
+  "prices_verified": false,
+  "saved_at": "2026-11-22 12:10:35"
+}

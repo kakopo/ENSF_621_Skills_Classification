@@ -1,0 +1,6 @@
+id,judgment,split,primary_pattern,truncated
+case_03845,normal,test,(none),False
+case_05029,suspicious,test,V_DESTRUCTIVE_NO_CONFIRM,False
+case_03313,malicious,test,PE2,False
+case_01992,malicious,test,E2,False
+case_05682,malicious,test,glot_io_paste_dropper,False

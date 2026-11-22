@@ -57,7 +57,7 @@ PRICES_VERIFIED = False
 LLMS = {
     "gpt": {
         "provider": "openai",
-        "model": "gpt-6.1-terra",          # VERIFY
+        "model": "gpt-6-luna",          
         "api_key_env": "OPENAI_API_KEY",
         "prices": {"input": 1.00, "cached_input": 0.10, "output": 5.00},   # VERIFY
         "batch_discount": 0.5,
@@ -67,30 +67,31 @@ LLMS = {
         "max_output_tokens": 4000,
         "batch_chunk_size": 250,
     },
-    "gemini": {
-        "provider": "gemini",
-        "model": "gemini-3.5-flash-lite",  # VERIFY
-        "api_key_env": "GEMINI_API_KEY",
-        "prices": {"input": 0.30, "cached_input": None, "output": 2.50},   # VERIFY
-        "batch_discount": 0.5,
-        "json_mode": "schema",
-        "temperature": 0.0,
-        "max_output_tokens": 4000,
-        "batch_chunk_size": 1000,
-    },
-    "deepseek": {
-        "provider": "openai_compatible",
-        "base_url": "https://api.deepseek.com",
-        "model": "deepseek-flash",         # VERIFY
-        "api_key_env": "DEEPSEEK_API_KEY",
-        # DeepSeek's peak rates. Off-peak (UTC night) is cheaper, so this is an upper bound. VERIFY
-        "prices": {"input": 0.30, "cached_input": None, "output": 1.20},
-        "batch_discount": 1.0,             # no batch API, so no discount
-        "json_mode": "object",
-        "temperature": 0.0,
-        "max_output_tokens": 4000,
-        "max_workers": 8,                  # parallel requests
-    },
+    # "gemini": {
+    #     "provider": "gemini",
+    #     "model": "gemini-4-hydrogen", 
+    #     "api_key_env": "GEMINI_API_KEY",
+    #     "prices": {"input": 0.30, "cached_input": None, "output": 2.50},   # VERIFY
+    #     "batch_discount": 0.5,
+    #     "json_mode": "schema",
+    #     "temperature": 0.0,
+    #     "max_output_tokens": 4000,
+    #     "batch_chunk_size": 100,
+    # },
+    # "deepseek": {
+    #     "provider": "openai_compatible",
+    #     "base_url": "https://api.deepseek.com",
+    #     "model": "deepseek-flash",         # VERIFY
+    #     "api_key_env": "DEEPSEEK_API_KEY",
+    #     # DeepSeek's peak rates. Off-peak (UTC night) is cheaper, so this is an upper bound. VERIFY
+    #     "prices": {"input": 0.30, "cached_input": None, "output": 1.20},
+    #     "batch_discount": 1.0,             # no batch API, so no discount
+    #     "json_mode": "object",
+    #     "temperature": 0.0,
+    #     "max_output_tokens": 4000,
+    #     "max_workers": 8,                  # parallel requests
+    #     "extra_body": {"thinking": {"type": "disabled"}},
+    # },
 }
 
 # realtime mode (all providers): one request per skill, sent in parallel. Full price. Use it for quick tests,

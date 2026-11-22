@@ -213,15 +213,15 @@ def submit(llm, run, retry_failed=False):
         return
     _save_config(run, llm, conf)
     provider = make_provider(llm, conf)
-    size = conf.get("batch_chunk_size", 1000)
-    for start in range(0, len(ids), size):
-        chunk = ids[start:start + size]
-        tag = f"{run.name}_{llm}_{len(jobs) + 1:02d}"
-        job_id = provider.submit_batch(run.requests(chunk), _llm_dir(run, llm), tag)
-        jobs.append({"job_id": job_id, "tag": tag, "ids": chunk, "submitted_at": time.strftime("%Y-%m-%d %H:%M:%S"),
-                     "submitted_ts": time.time(), "collected": False})
-        _save_jobs(run, llm, jobs)    # saved after each job, so nothing is submitted twice
-        print(f"{llm}: submitted job {job_id} with {len(chunk)} skills")
+    size = conf.get("batch_chunk_size", 100)
+    # for start in range(0, len(ids), size):
+    chunk = ids[:size]
+    tag = f"{run.name}_{llm}_{len(jobs) + 1:02d}"
+    job_id = provider.submit_batch(run.requests(chunk), _llm_dir(run, llm), tag)
+    jobs.append({"job_id": job_id, "tag": tag, "ids": chunk, "submitted_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+                    "submitted_ts": time.time(), "collected": False})
+    _save_jobs(run, llm, jobs)    # saved after each job, so nothing is submitted twice
+    print(f"{llm}: submitted job {job_id} with {len(chunk)} skills")
 
 
 def status(llm, run, quiet=False):

@@ -1,0 +1,22 @@
+{
+  "llm": "deepseek",
+  "provider": "openai_compatible",
+  "base_url": "https://api.deepseek.com",
+  "model": "deepseek-flash",
+  "api_key_env": "DEEPSEEK_API_KEY",
+  "prices": {
+    "input": 0.3,
+    "cached_input": null,
+    "output": 1.2
+  },
+  "batch_discount": 1.0,
+  "json_mode": "object",
+  "temperature": 0.0,
+  "max_output_tokens": 4000,
+  "max_workers": 8,
+  "prompt_version": "108e285a3c",
+  "include_flags": true,
+  "max_input_chars": 120000,
+  "prices_verified": false,
+  "saved_at": "2026-11-20 16:40:53"
+}

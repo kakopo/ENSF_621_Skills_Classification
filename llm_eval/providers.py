@@ -80,7 +80,10 @@ class OpenAICompatibleProvider(Provider):
                                        "json_schema": {"name": "skill_label", "strict": True, "schema": RESPONSE_SCHEMA}}
         elif c.get("json_mode") == "object":
             body["response_format"] = {"type": "json_object"}
-        body.update(c.get("extra_body", {}))   # any other provider-specific parameter
+        if c.get("extra_body"):
+            # OpenAI-compatible SDKs pass provider-specific request fields through this
+            # wrapper; expanding them into `body` makes the SDK reject unknown kwargs.
+            body["extra_body"] = c["extra_body"]
         return body
 
     @staticmethod
