@@ -8,21 +8,6 @@ LLM: gemini,true malicious,1,6,509
 LLM: gpt,true normal,194,98,7
 LLM: gpt,true suspicious,17,141,27
 LLM: gpt,true malicious,0,30,486
-ML: Decision Tree,true normal,265,14,20
-ML: Decision Tree,true suspicious,15,160,10
-ML: Decision Tree,true malicious,21,19,476
-ML: Naive Bayes,true normal,263,28,8
-ML: Naive Bayes,true suspicious,93,91,1
-ML: Naive Bayes,true malicious,75,47,394
-ML: SVM,true normal,281,10,8
-ML: SVM,true suspicious,8,174,3
-ML: SVM,true malicious,14,2,500
-ML: KNN,true normal,244,21,34
-ML: KNN,true suspicious,85,57,43
-ML: KNN,true malicious,51,10,455
-ML: Random Forest,true normal,284,6,9
-ML: Random Forest,true suspicious,11,164,10
-ML: Random Forest,true malicious,23,7,486
-ML: XGBoost,true normal,294,3,2
-ML: XGBoost,true suspicious,3,178,4
-ML: XGBoost,true malicious,11,6,499
+ML: Stack (all 6),true normal,294,3,2
+ML: Stack (all 6),true suspicious,3,179,3
+ML: Stack (all 6),true malicious,7,7,502

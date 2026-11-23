@@ -48,6 +48,12 @@ def compare(run_name, ml_models=None, save=True):
     ml_cols = [c for c in export.columns if c.startswith("ml_")]
     if ml_models:
         ml_cols = [f"ml_{m}" for m in ml_models]
+        missing = [c[3:] for c in ml_cols if c not in export.columns]
+        if missing:
+            raise KeyError(f"No predictions for {missing} in {cfg.DATA_FILE.name}. For the stacked models, run "
+                           "Section 6.5 and then Section 10 of the ML notebook again. "
+                           f"Available: {[c[3:] for c in export.columns if c.startswith('ml_')]}")
+    stack_names = set(meta.get("stack_models", []))
 
     # common skills: answered (or attempted) by every LLM, and in the ML test split
     common = set.intersection(*(set(p["id"]) for p in llm_preds.values()))
@@ -72,7 +78,8 @@ def compare(run_name, ml_models=None, save=True):
         }
     for col in ml_cols:
         name = col[3:]
-        rows[f"ML: {name}"] = {"type": "ML" + (" (best)" if name == meta.get("best_model") else ""), "model": name,
+        kind = "ML (stack)" if name in stack_names else "ML (best)" if name == meta.get("best_model") else "ML"
+        rows[f"ML: {name}"] = {"type": kind, "model": name,
                                **scores(y_true, export.loc[common, col]), "skills scored": len(common),
                                "failed answers": 0, "cost (USD)": 0.0}
     table = pd.DataFrame(rows).T
